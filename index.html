@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>News App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>    
+        <nav>
+            <div class="main-nav container flex">
+                <a href="#" onclick="reload()">
+                    <img src="./assests/Alogo.jpg" height="60px" width="60px" alt="my logo">
+                </a>
+                <div class="nav-links">
+                <ul class="flex">
+                <li class="ref" onclick="reload()">Refresh</li>
+                <li class="hover-link nav-item" id="cricket" onclick="onNavItemClick('cricket')">Cricket</li>
+                <li class="hover-link nav-item" id="science" onclick="onNavItemClick('science')">Science</li>
+                <li class="hover-link nav-item" id="tech" onclick="onNavItemClick('tech')">Tech</li>
+                <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li> 
+                </ul>               
+                </div>
+               <div class="search-bar flex">
+                <input type="text"  id="search-text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+         </div>
+        </nav>
+        
+        <main>    
+          <div class="cards-container container flex" id="cards-container">
+        </div>
+        </main>
+        
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                <img id="news-img" src="" alt="another pic">
+                </div>
+                <div class="card-Content">
+                    <h3 class="news-title" id="news-title"></h3>
+                    <h6 class="news-source" id="news-source"></h6>
+                    <p class="news-desc" id="news-desc"></p>
+                </div>
+            </div>
+        </template>
+          
+   
+        <script src="index.js"></script>
+    </body>
+</html>
